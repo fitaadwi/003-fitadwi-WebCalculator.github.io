@@ -8,10 +8,16 @@ function c(){
 
 function del(){
     var x = document.form.textView.value;
+    
     document.form.textView.value = x.substring(0, x.length-1)
 }
 
 function equal(){
-    var x = document.form.textView.value;
-    document.form.textView.value = eval(x);
+     var x = document.form.textView.value;
+    if(x ==""){
+        alert('Harap masukan angka terlebih dahulu')
+    }
+    if(x){
+        document.form.textView.value = eval(x);
+    }
     }
